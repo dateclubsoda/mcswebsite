@@ -1,0 +1,43 @@
+<div class="blog-bubbles-wrapper">
+    <img class="desktop-bubble-group" src="/wp-content/uploads/2021/11/blog-bubbles.png" width="1270" />
+    <img class="mobile-bubble-group" src="/wp-content/uploads/2021/10/bubbleGroupFullMobile.png" width="350" />
+</div>
+
+<div class="blog-page1">
+    <div class="blog-image1-wrapper">
+        <img class="blog-image1" src="/wp-content/uploads/2021/10/icon-blog.png" alt="" />
+    </div>
+    <div class="blog-title1">Happier Hour</div>
+</div>
+
+<div class="blog-page2">
+    <div class="blog-designer-container">[display-posts order="DESC" include_excerpt="true" image_size="thumbnail" excerpt_more="KEEP READING" excerpt_length="100" excerpt_more_link="true"]</div>
+</div>
+
+<script>
+    jQuery(document).ready(() => {
+        var html = document.getElementsByTagName("html")[0];;
+        html.style.backgroundImage = "linear-gradient(180deg, #B467E3 0%, #4E21B2 12.5%, #06041D 35%, #06041D 100%)";
+        var bubbleDesktop = document.getElementsByClassName("desktop-bubble-group")[0];
+        var bubbleMobile = document.getElementsByClassName("mobile-bubble-group")[0];
+        document.body.onscroll = function(e) {
+            if (window.innerWidth < 500) {
+                if (bubbleMobile) {
+                    bubbleMobile.style.top = 100 + (window.pageYOffset)/-4 + "px";
+                }
+            } else {
+                if (bubbleDesktop) {
+                    bubbleDesktop.style.top = window.pageYOffset/-8 + "px";
+                }
+            }
+        }
+    });
+</script>
+
+<?php if ( have_posts() ) : while( have_posts()  ) : the_post(); ?>
+    <h1><?php the_title(); ?></h1>
+    <a href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail( 'full' ); ?>
+    </a>
+    <p><?php the_excerpt(); ?></p>
+<?php endwhile; endif; ?>
