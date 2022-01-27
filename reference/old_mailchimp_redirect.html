@@ -1,0 +1,50 @@
+<div id="loading-screen" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,0.9); display: flex; align-items: center; z-index: 2500;">
+    <div class="lds-ring" style="margin: 0 auto;"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<div class="android aods" id="copy-container">
+    <div class="image1-wrapper">
+        <img class="ios-icon" src="https://devclubsoda.wpengine.com/wp-content/uploads/2021/11/ios-icon.png">
+    </div>
+    <p class="android-copy copy-header">Hello Android!</p>
+    <p class="android-copy">Please check back soon to join our private beta. We’re currently only available for iPhone iOS. </p>
+    <p class="aods-copy copy-header">Beta release now available for iOS (iPhone)</p>
+    <p class="aods-copy">Please visit our website on your mobile device to download.</p>
+</div>
+
+<script>
+    const iosPhone = /iPhone/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1; // && ua.indexOf("mobile");
+    if (iosPhone) {
+        window.location = "https://testflight.apple.com/join/h0Hx49FS";
+    } else if (isAndroid) {
+        jQuery(document).ready(() => {
+            var html = document.getElementsByTagName("html")[0];
+            html.style.backgroundImage = "linear-gradient(180deg, #2A1368 0%, #06041D 50%, #06041D 100%)";
+            var loading = document.getElementById("loading-screen");
+            loading.style.display = "none";
+            var copyContainer = document.getElementById("copy-container");
+            copyContainer.classList.remove("aods");
+            var iosImage = document.getElementsByClassName("image1-wrapper")[0];
+            iosImage.style.display = "none";
+            var copyTexts = document.getElementsByClassName("aods-copy");
+            for (var i = 0; i < copyTexts.length; i++) {
+                copyTexts[i].style.display = "none";
+            }
+        });
+    } else {
+        jQuery(document).ready(() => {
+            var html = document.getElementsByTagName("html")[0];
+            html.style.backgroundImage = "linear-gradient(180deg, #2A1368 0%, #06041D 50%, #06041D 100%)";
+            var loading = document.getElementById("loading-screen");
+            loading.style.display = "none";
+            var copyContainer = document.getElementById("copy-container");
+            copyContainer.classList.remove("android");
+            var copyTexts = document.getElementsByClassName("android-copy");
+            for (var i = 0; i < copyTexts.length; i++) {
+                copyTexts[i].style.display = "none";
+            }
+        });
+    }
+</script>
