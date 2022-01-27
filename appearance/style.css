@@ -391,7 +391,6 @@ ul#menu-mobile-menu li:last-child a {
 
 .footer-container {
 	border-top: 1px solid #4a311b;
-	/* border-top: 1px solid rgba(142, 122, 140, 0.4); */
 }
 
 .footer-parent-container {
@@ -2187,8 +2186,7 @@ ul.display-posts-listing li:first-child .excerpt-more {
 	position: absolute;
 	top: 125px;
 	left: 50%;
-	/* center the image horizontally by subtracting half of its width*/
-	margin-left: -160px;
+	margin-left: -160px; /* center the image horizontally by subtracting half of its width */
 }
 .single-post .entry-content img {
 	width: 320px;
@@ -2504,8 +2502,6 @@ ul.display-posts-listing li:first-child .excerpt-more {
 	.more-blog-posts a img {
 		height: 125px;
 		width: 125px;
-		/* position: relative;
-		right: -10px; */
 	}
 }
 
@@ -3067,10 +3063,6 @@ ul.display-posts-listing li:first-child .excerpt-more {
 	outline: none;
 	border-bottom: 1px solid #E2770E;
 }
-
-/* input:focus, textarea:focus, select:focus{
-	outline: none;
-} */
 /* -------------------- PAGE 1 (END) ----------------------- */
 
 @media only screen and (min-width: 1300px) {
@@ -4093,8 +4085,6 @@ ul.display-posts-listing li:first-child .excerpt-more {
 	width: 100%;
 	margin: 25px auto;
 }
-
-/* .gettheapp-mobile-container .form-wrapper {} */
 
 .gettheapp-mobile-container .form-wrapper span:not(.yikes-mailchimp-submit-button-span-text) {
 	display: none;
