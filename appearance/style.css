@@ -151,7 +151,7 @@ ul#menu-mobile-menu li:nth-child(2) a {
 
 ul#menu-mobile-menu li:last-child a {
 	background-image: url("https://devclubsoda.wpengine.com/wp-content/uploads/2021/11/get-app-btn.png");
-	background-size: 180px;
+	background-size: 200px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -196,7 +196,7 @@ ul#menu-mobile-menu li:last-child a {
 
 	/* ---------- GET THE APP BUTTON ----------------------- */
 	ul#menu-headermenu li:last-child a {
-		background-size: 180px;
+		background-size: 200px;
 	}
 	/* ---------- GET THE APP BUTTON (END) ----------------------- */
 
@@ -2178,10 +2178,6 @@ ul.display-posts-listing li:first-child .excerpt-more {
 	display: none;
 }
 
-.single-post .main-content-container {
-	margin: -20px auto;
-}
-
 .single-post #container {
 	text-align: center;
 }
@@ -2269,6 +2265,8 @@ ul.display-posts-listing li:first-child .excerpt-more {
 	/* Primary/Gold */
 	color: #FFCC9D;
 	text-align: left;
+	text-transform: capitalize;
+	line-height: 130%;
 	margin-bottom: 20px;
 }
 
@@ -2276,6 +2274,25 @@ ul.display-posts-listing li:first-child .excerpt-more {
 	font-family: 'HalisR';
 	font-weight: 300;
 	font-size: 20px;
+	color: rgba(255,255,255,0.75);
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+.single-post #section-bullet-list {
+	font-family: 'HalisR';
+	font-weight: 300;
+	font-size: 20px;
+	color: rgba(255,255,255,0.75);
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+.single-post #section-dialogue {
+	font-family: 'HalisR';
+	font-weight: 300;
+	font-size: 20px;
+	font-style: italic;
 	color: rgba(255,255,255,0.75);
 	text-align: left;
 	margin-bottom: 50px;
